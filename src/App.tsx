@@ -1,7 +1,14 @@
-import React from 'react';
+import ThemeProvider from "providers/theme";
+import React from "react";
+import Home from "pages/home";
+import "normalize.css";
 
 const App: React.FC = () => {
-    return <div />
-}
+  return (
+    <ThemeProvider>
+      <Home />
+    </ThemeProvider>
+  );
+};
 
 export default App;
