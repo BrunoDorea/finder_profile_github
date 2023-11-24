@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         toggle: TypeTheme.light,
         button: (
           <>
-            LIGHT <IoIosSunny />{" "}
+            <IoIosSunny />{" "}
           </>
         ),
       };
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
       toggle: TypeTheme.dark,
       button: (
         <>
-          DARK <IoIosMoon />{" "}
+          <IoIosMoon />{" "}
         </>
       ),
     };
