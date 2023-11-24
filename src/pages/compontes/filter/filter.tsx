@@ -1,8 +1,17 @@
 import React from 'react'
+import { CardBox, FilterContainer, IconContainer, SearchInput } from './filter.styled'
+import { BsSearch } from "react-icons/bs";
+import { useHomeContext } from 'pages/home';
 
 const Filter: React.FC = () => {
+    const { search, handleSearch } = useHomeContext();
   return (
-    <div>filter</div>
+    <FilterContainer>
+        <CardBox>
+            <IconContainer><BsSearch/></IconContainer>
+            <SearchInput placeholder='Pesquise por usuário do github' value={search} onChange={(e) => handleSearch(e.target.value)} />
+        </CardBox>
+    </FilterContainer>
   )
 }
 

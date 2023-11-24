@@ -5,6 +5,7 @@ import { GithubInterface } from "types/github";
 import { HomeContextInterface } from "types/home";
 import { useDebounce } from "usehooks-ts";
 import Card from "./compontes/card/card";
+import Filter from "./compontes/filter/filter";
 
 const HomeContext = createContext<HomeContextInterface>({
   github: null,
@@ -33,6 +34,7 @@ const Home: React.FC = () => {
   return (
     <HomeContext.Provider value={{ github, search, handleSearch: setSearch }}>
       <MainLayout>
+        <Filter />
         <Card />
       </MainLayout>
     </HomeContext.Provider>
