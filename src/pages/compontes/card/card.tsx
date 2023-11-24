@@ -32,15 +32,19 @@ const Card: React.FC = () => {
           </Column>
         </ProfileHeader>
 
-         <InfoContainer>
-          <About>
-            <GrLocation />
-            {github?.location}
-          </About>
-          <About>
-            <GoLink />
-            {github?.blog}
-          </About>
+        <InfoContainer>
+        { github?.location && (
+            <About>
+                <GrLocation />
+                {github?.location}
+            </About>
+        )}
+        { github?.blog && (
+            <About>
+                <GoLink />
+                {github?.blog}
+            </About>
+        )}
         </InfoContainer>
 
         <Line />
